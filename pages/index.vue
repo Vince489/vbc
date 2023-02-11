@@ -1,12 +1,10 @@
 <template>
-  <div class="h-screen">
 
-    <div class="bg-black/20 h-full w-full bg-no-repeat bg-cover" style="background-image: url('https://virtronesports.com/img/lee-ko.png')"></div>
-
+  <div class="flex flex-row h-screen">
+    <div class="w-16 bg-blue-200">a</div>
+    <div class="w-64 bg-green-200">b</div>
+    <div class="flex-auto w-16 bg-red-200">c</div>
   </div>
-
-  <div class="bg-gray-900 bg-opacity-50 h-full w-full  bg-cover" ></div>
-
 </template>
 
 <script setup>

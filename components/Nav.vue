@@ -40,8 +40,8 @@
 
           <!--second nav-->
           <div class="md:visible md:flex items-center space-x-1">
-            <div>
-              <div id="profile-btn">
+            <div >
+              <div class="hidden" id="profile-btn">
                 <button
                   type="button"
                   @click="toggleProfile"
@@ -63,6 +63,7 @@
                 >
                   <span class="sr-only">Open user menu</span>
                   <img
+                    class="h-8 w-8 rounded-full"
                     src="https://virtronesports.com/img/Andrews.jpg"
                     alt=""
                   />
@@ -108,14 +109,6 @@
                   tabindex="-1"
                   id="user-menu-item-1"
                   >Settings</nuxt-link
-                >
-                <nuxt-link
-                  to="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="user-menu-item-2"
-                  >Sign out</nuxt-link
                 >
               </div>
             </div>

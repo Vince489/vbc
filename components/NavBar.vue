@@ -1,4 +1,5 @@
 <template>
+
   <nav id="navbar" class="z-40 bg-slate-800 fixed inset-x-0">
     <div class="px-3 pb-1 mx-auto">
       <div class="flex justify-between">
@@ -36,6 +37,95 @@
             <nuxt-link to="#/events" class="font-semibold py-3 px-3 text-gray-300">Events</nuxt-link>
           </div>
         </div>
+
+          <!--second nav-->
+          <div class="invisible md:visible md:flex items-center space-x-1">
+            <div>
+              <div id="profile-btn">
+                <button
+                  type="button"
+                  @click="toggleProfile"
+                  class="
+                    user-button
+                    flex
+                    rounded-full
+                    bg-gray-800
+                    text-sm
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-white
+                    focus:ring-offset-2
+                    focus:ring-offset-gray-800
+                  "
+                  id="user-menu-button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <span class="sr-only">Open user menu</span>
+                  <img
+                    class="h-8 w-8 rounded-full"
+                    src="https://virtronesports.com/img/Andrews.jpg"
+                    alt=""
+                  />
+                </button>
+              </div>
+
+              <div
+                v-if="toggle_profile"
+                class="
+                  user-menu
+                  absolute
+                  right-0
+                  z-10
+                  mt-2
+                  w-48
+                  origin-top-right
+                  rounded-md
+                  bg-white
+                  py-1
+                  shadow-lg
+                  ring-1 ring-black ring-opacity-5
+                  focus:outline-none
+                "
+                role="menu"
+                id="profile-menu"
+                aria-orientation="vertical"
+                aria-labelledby="user-menu-button"
+                tabindex="-1"
+              >
+                <!-- Active: "bg-gray-100", Not Active: "" -->
+                <nuxt-link
+                  to="#"
+                  class="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-0"
+                  >Your Profile</nuxt-link
+                >
+                <nuxt-link
+                  to="#"
+                  class="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-1"
+                  >Settings</nuxt-link
+                >
+                <nuxt-link
+                  to="#"
+                  class="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-2"
+                  >Sign out</nuxt-link
+                >
+              </div>
+            </div>
+
+            <nuxt-link to="#login" class="font-semibold py-1 px-3 text-gray-700"
+              >Login</nuxt-link
+            >
+            <nuxt-link to="/signup" class="btn">Sign up</nuxt-link>
+          </div>        
       </div>
     </div>
   </nav>
